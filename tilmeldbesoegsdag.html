@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS stylesheet og JavaScript-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+
+    <!-- favicon-->
+    <link rel="icon" href="icons/favicon.png" type="image/png">
+    <title>Tilmelding til besøgsdag</title>
+</head>
+
+<!-- **********************************
+    den her side er kodet af Nikoline
+*************************************** -->
+
+
+<body>
+    <header>
+        <!-- ********** nav bar til laptop med dropdown *************
+         ******* ref: w3schools ****** -->
+        <nav id="laptopNav">
+            <a href="index.html"><img id="logo" src="images/logo-stor-1.svg" alt="Logo"></a>
+            <img src="images/Line-5.png" alt="Linje">
+
+
+            <!-- Dropdown til "Om skolen" -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('omSkolenDropdown')" class="dropbtn">Om skolen</button>
+                <div id="omSkolenDropdown" class="dropdown-content">
+                    <a href="#">Bestyrelse & skolekred</a>
+                    <a href="#">Værdigrundlag</a>
+                    <a href="#">Medarbejdere</a>
+                    <a href="#">Lovpligtdig dokumentation</a>
+                    <a href="#">Gamle elever forening</a>
+                    <a href="#">Årsplan</a>
+                    <a href="#">Ledige pladser</a>
+                    <a href="#">Pris</a>
+                </div>
+            </div>
+
+            <!-- Dropdown til "Linjefag" -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('linjefagDropdown')" class="dropbtn">Linjefag</button>
+                <div id="linjefagDropdown" class="dropdown-content">
+                    <a href="Billedkunst.html">Billedkunst</a>
+                    <a href="#">Drama</a>
+                    <a href="#">E-sport</a>
+                    <a href="#">Musik</a>
+                    <a href="#">Sport</a>
+                </div>
+            </div>
+
+            <!-- Dropdown til "Undervisning" -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('undervisningDropdown')" class="dropbtn">Undervisning</button>
+                <div id="undervisningDropdown" class="dropdown-content">
+                    <a href="#">9. klasse</a>
+                    <a href="#">10. klasse</a>
+                    <a href="#">Prøvefri 10. klasse</a>
+                    <a href="#">Studievejledning</a>
+                    <a href="#">Musik og teaterforestilling</a>
+                    <a href="#">Rejser</a>
+                    <a href="#">Elever fra Grønland & Færøerne</a>
+                    <a href="#">Dansk som andet sprog</a>
+                </div>
+            </div>
+
+            <!-- Dropdown til "Livet på Ådalen" -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('livetPaSkolenDropdown')" class="dropbtn">Livet på Ådalen</button>
+                <div id="livetPaSkolenDropdown" class="dropdown-content">
+                    <a href="#">Sund mad</a>
+                    <a href="#">Medindflydelse</a>
+                    <a href="#">Hverdagen</a>
+                    <a href="#">Inklusion</a>
+                </div>
+            </div>
+
+            <a href="#" class="knap1">Besøg skolen</a>
+        </nav>
+
+        <nav id="mobilNav">
+            <!-- **************** nav bar til mobil med burger *******
+            ref: ** -->
+            <a href="index.html"><img src="images/logo-mobil.png" alt="Logo"></a>
+            <div class="hamburger">
+                <div class="bar">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <nav class="mobile-nav">
+
+
+        <button class="accordion">Om skolen</button>
+        <div class="panel">
+            <a href="#">Bestyrelse & skolekred</a>
+            <a href="#">Medarbejdere</a>
+            <a href="#">Lovpligtdig dokumentation</a>
+            <a href="#">Gamle elever forening</a>
+            <a href="#">Årsplan</a>
+            <a href="#">Ledige pladser</a>
+            <a href="#">Pris</a>
+        </div>
+
+
+        <button class="accordion">Linjefag</button>
+        <div class="panel">
+            <a href="Billedkunst.html">Billedkunst</a>
+            <a href="#">Drama</a>
+            <a href="#">E-sport</a>
+            <a href="#">Musik</a>
+            <a href="#">Sport</a>
+        </div>
+
+        <button class="accordion">Undervisning</button>
+        <div class="panel">
+            <a href="#">9. klasse</a>
+            <a href="#">10. klasse</a>
+            <a href="#">Prøvefri 10. klasse</a>
+            <a href="#">Studievejledning</a>
+            <a href="#">Musik og teaterforestilling</a>
+            <a href="#">Rejser</a>
+            <a href="#">Elever fra Grønland & Færøerne</a>
+            <a href="#">Dansk som andet sprog</a>
+        </div>
+
+
+        <button class="accordion">Livet på Ådalen</button>
+        <div class="panel">
+            <a href="#">Sund mad</a>
+            <a href="#">Medindflydelse</a>
+            <a href="#">Hverdagen</a>
+            <a href="#">Inklusion</a>
+        </div>
+
+        <a href="#" class="knap1">Besøg skolen</a>
+
+
+    </nav>
+    <main>
+        <section id="blanketinfo">
+            <h2>Tilmeld dig besøgsdag på Efterskolen Ådalen</h2>
+            <p>Besøg os på en af vores besøgsdage, hvis du overvejer, om Efterskolen Ådalen er noget for dig.
+                Vores elever viser dig skolen, og du og din familie snakker med en lærer.
+                <br><br>
+                Tilmeld dig nedenfor:
+            </p>
+        </section>
+
+        <section class="etKortIMidten">
+            <form>
+                <h4>Blanket til besøgsdag</h4>
+                <p class="gul">*Skal udfyldes</p>
+                <label for="elevnavn" class="textLabel">*Elevens fulde navn</label>
+                <br>
+                <input type="text" class="tekstinput" placeholder="William Nielsen">
+
+                <h6>*Besøgsdato</h6>
+                <ul>
+                    <li>
+                        <input type="radio" id="20februar" name="besoesdato" value="februar">
+                        <label for="februar">d. 20. februar</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="3februar" name="besoesdato" value="marts">
+                        <label for="marts">d. 3. marts</label>
+                    </li>
+                </ul>
+
+                <h6>*Ønsker I at snakke med en lærer?<br>
+                    (Samtalen er uforpligtende, men en forudsætning for den endelige tilmelding)</h6>
+                <ul>
+                    <li>
+                        <input type="radio" id="Ja" name="samtale" value="ja">
+                        <label for="ja">Ja</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="Nej" name="samtale" value="nej">
+                        <label for="nej">Nej</label>
+                    </li>
+                </ul>
+
+                <h6>Ønsket skoleår</h6>
+                <ul>
+                    <li>
+                        <input type="radio" id="2425" name="skoleår" value="2024/2025">
+                        <label for="2024/2025">2024/2025</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="2526" name="skoleår" value="2025/2026">
+                        <label for="2025/2026">2025/2026</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="2627" name="skoleår" value="2026/2027">
+                        <label for="2026/2027">2026/2027</label>
+                    </li>
+                </ul>
+
+                <h6>Klassetrin i det ønsket skoleår</h6>
+                <ul>
+                    <li>
+                        <input type="radio" id="9klasse" name="klassetrin" value="9klasse">
+                        <label for="9klasse">9. klasse</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="10klasse" name="klassetrin" value="10klasse">
+                        <label for="10klasse">10. klasse</label>
+                    </li>
+                </ul>
+
+                <h6>Hvilket linjefag er du interesseret i?<br>
+                    (sæt gerne to krydser)</h6>
+                <ul>
+                    <li>
+                        <input type="radio" id="tbbilledkunst" name="linjefag" value="billedkunst">
+                        <label for="billedkunst">Billedkunst (venteliste til 2024/25)</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="tbdrama" name="linjefag" value="drama">
+                        <label for="drama">Drama</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="tbmusik" name="linjefag" value="musik">
+                        <label for="musik">Musik (venteliste til 2024/25)</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="tbsport" name="linjefag" value="sport">
+                        <label for="sport">Sport</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="tbesport" name="linjefag" value="esport">
+                        <label for="esport">Esport</label>
+                    </li>
+                </ul>
+
+                <h6>Køn</h6>
+                <ul>
+                    <li>
+                        <input type="radio" id="pige" name="koen" value="pige">
+                        <label for="pige">Pige</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="dreng" name="koen" value="dreng">
+                        <label for="dreng">Dreng</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="andetkoen" name="koen" value="andet">
+                        <label for="andet">Andet</label>
+                    </li>
+                </ul>
+
+                <label for="forældrenr" class="textLabel">*Forældre/pårørendes mobilnr.:</label>
+                <br>
+                <input type="text" class="tekstinput" placeholder="12345678">
+
+                <label for="forældremail" class="textLabel">*Forældre/pårørendes email:</label>
+                <br>
+                <input type="text" class="tekstinput" placeholder="Hannenielsen@gmail.com">
+
+                <label for="postnr" class="textLabel">*Postnr.:</label>
+                <br>
+                <input type="text" class="tekstinput" placeholder="8000">
+                <br>
+                <label for="bemaerkninger" class="textLabel">Evt. bemærkninger</label>
+                <br>
+                <input type="text" class="tekstinput" maxlength="250" placeholder="Maks 250 tegn">
+                <br>
+                <br>
+                <input type="submit" value="Bekræft tilmelding" class="knap1">
+
+            </form>
+        </section>
+
+        <section class="etKortIMidten">
+            <div class="kortmbgfarve">
+                <h4>Program for besøgsdag</h4>
+                <p>*Vi forbeholder os ret til ændringer i programmet</p>
+                <ul id="programli">
+                    <li>Velkommen - efterskolens forstander fortæller kort om skolen</li>
+                    <li>Fællessang</li>
+                    <li>Du høre om et par linjefag efter egen interesse</li>
+                    <li>Vores elever viser jer rundt på skolen</li>
+                    <li>Samtale med en lærer i ca. 20 min.</li>
+                    <li>Kaffe, te, boller, saft og frugt</li>
+                </ul>
+                <p>Besøgsdagen varer cirka to timer. I forbindelse med de individuelle samtaler kan der være ventetid,
+                    hvor I kan hygge jer med en kop kaffe eller te.
+                    Efter den individuelle samtale har du en god fornemmelse af, om du kunne tænke dig at blive elev på
+                    Efterskolen Ådalen.
+                    I får en indmeldelsesblanket med hjem, og hvis svaret er “Ja”, underskriver dine forældre den
+                    endelige tilmelding og sender den til skolen.
+                    <br>
+                    <br>Vi glæder os til at møde jer!
+                </p>
+            </div>
+        </section>
+
+        <section class="etKortIMidten">
+            <div id="laesMereKort">
+
+                <div id="laesMereOverlay">
+                    <h3>En kreativ og boglig efterskole</h3>
+                    <p>Du udvikler dig fagligt, kreativt og personligt og får nye venner. <br>
+                        Efterskolen Ådalen ligger i et naturskønt område, tæt på Aarhus i Midtjylland.</p>
+                    <a href="#" class="knap2">Læs mere om Efterskolen Ådalen</a>
+                </div>
+
+            </div>
+
+        </section>
+
+   <!-- ********* footeren ********* -->
+   <footer>
+    <div class="footerLogo">
+      <img src="images/logo-stor-1.svg" alt="logo">
+    </div>
+
+    <div class="footerContainer">
+      <!-- to colonner en til venstre og en til højre-->
+      <div class="venstreSide">
+        <a href="tilmeldbesoegsdag.html" class="knap1">Besøg skolen</a>
+
+        <div class="textContainer">
+          <h3>Kontakt os:</h3>
+          <p>
+            Tlf: <a href="tel:+4587682200">+45 87682200</a> <br>
+            Email:
+            <a href="mailto:aadalen@efterskolen-aadalen.dk">aadalen@efterskolen-aadalen.dk</a>
+          </p>
+
+          <h3>Kontor åbningstider</h3>
+          <p>
+            Mandag-torsdag: kl. 9:00 - 12:30<br>
+            Fredag kl. 9:00 - 13:15
+          </p>
+
+          <h3>Følg med:</h3>
+          <div class="soMe">
+            <a href="https://www.instagram.com/efterskolenaadalen/?hl=en"><img src="icons/insta.png" alt="instagram logo"></a>
+            <a href="https://www.instagram.com/efterskolenaadalen/?hl=en"><img src="icons/fb.png" alt="facebook logo"></a>
+            <a href="https://www.youtube.com/@EfterskolenAadalen"><img src="icons/youtube.png" alt="youtube logo"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="højreside">
+        <div class="textContainer">
+          <h3>Find vej:</h3>
+          <p>
+            Efterskolen Ådalen <br>
+            Brogårdsvej 2<br>
+            8362 Hørning
+          </p>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2225.5488047492677!2d10.0503751!3d56.09572379999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c6bbcb9794545%3A0x421482ae40c48966!2zc3QsIEJyb2fDpXJkc3ZlaiAyLCA4MzYyIEjDuHJuaW5n!5e0!3m2!1sen!2sdk!4v1702460627846!5m2!1sen!2sdk"
+          width="450" height="350" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

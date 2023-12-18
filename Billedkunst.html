@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS stylesheet og JavaScript-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+
+    <!-- favicon-->
+    <link rel="icon" href="icons/favicon.png" type="image/png">
+
+    <title>Efterskolen Ådalen - 2. semesters eksamensprojekt </title>
+</head>
+
+<!--*******************************
+     den her side er indtil videre kodet af Anne-Mette :P 
+     **************************** -->
+
+<body>
+    <header>
+        <!-- ********** nav bar til laptop med dropdown *************
+         ******* ref: w3schools ****** -->
+        <nav id="laptopNav">
+            <a href="index.html"><img id="logo" src="images/logo-stor-1.svg" alt="Logo"></a>
+            <img src="images/Line-5.png" alt="Linje">
+
+
+            <!-- Dropdown til "Om skolen" -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('omSkolenDropdown')" class="dropbtn">Om skolen</button>
+                <div id="omSkolenDropdown" class="dropdown-content">
+                    <a href="#">Bestyrelse & skolekred</a>
+                    <a href="#">Værdigrundlag</a>
+                    <a href="#">Medarbejdere</a>
+                    <a href="#">Lovpligtdig dokumentation</a>
+                    <a href="#">Gamle elever forening</a>
+                    <a href="#">Årsplan</a>
+                    <a href="#">Ledige pladser</a>
+                    <a href="#">Pris</a>
+                </div>
+            </div>
+
+            <!-- Dropdown til "Linjefag" -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('linjefagDropdown')" class="dropbtn">Linjefag</button>
+                <div id="linjefagDropdown" class="dropdown-content">
+                    <a href="Billedkunst.html">Billedkunst</a>
+                    <a href="#">Drama</a>
+                    <a href="#">E-sport</a>
+                    <a href="#">Musik</a>
+                    <a href="#">Sport</a>
+                </div>
+            </div>
+
+            <!-- Dropdown til "Undervisning" -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('undervisningDropdown')" class="dropbtn">Undervisning</button>
+                <div id="undervisningDropdown" class="dropdown-content">
+                    <a href="#">9. klasse</a>
+                    <a href="#">10. klasse</a>
+                    <a href="#">Prøvefri 10. klasse</a>
+                    <a href="#">Studievejledning</a>
+                    <a href="#">Musik og teaterforestilling</a>
+                    <a href="#">Rejser</a>
+                    <a href="#">Elever fra Grønland & Færøerne</a>
+                    <a href="#">Dansk som andet sprog</a>
+                </div>
+            </div>
+
+            <!-- Dropdown til "Livet på Ådalen" -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('livetPaSkolenDropdown')" class="dropbtn">Livet på Ådalen</button>
+                <div id="livetPaSkolenDropdown" class="dropdown-content">
+                    <a href="#">Sund mad</a>
+                    <a href="#">Medindflydelse</a>
+                    <a href="#">Hverdagen</a>
+                    <a href="#">Inklusion</a>
+                </div>
+            </div>
+
+            <a href="tilmeldbesoegsdag.html" class="knap1">Besøg skolen</a>
+        </nav>
+
+        <nav id="mobilNav">
+            <!-- **************** nav bar til mobil med burger *******
+            ref: ** -->
+            <a href="index.html"><img src="images/logo-mobil.png" alt="Logo"></a>
+            <div class="hamburger">
+                <div class="bar">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <nav class="mobile-nav">
+        <button class="accordion">Om skolen</button> 
+        <div class="panel">
+            <a href="#">Bestyrelse & skolekred</a>
+            <a href="#">Medarbejdere</a>
+            <a href="#">Lovpligtdig dokumentation</a>
+            <a href="#">Gamle elever forening</a>
+            <a href="#">Årsplan</a>
+            <a href="#">Ledige pladser</a>
+            <a href="#">Pris</a>
+        </div>
+
+
+        <button class="accordion">Linjefag</button>
+        <div class="panel">
+            <a href="Billedkunst.html">Billedkunst</a>
+            <a href="#">Drama</a>
+            <a href="#">E-sport</a>
+            <a href="#">Musik</a>
+            <a href="#">Sport</a>
+        </div>
+
+        <button class="accordion">Undervisning</button>
+        <div class="panel">
+            <a href="#">9. klasse</a>
+            <a href="#">10. klasse</a>
+            <a href="#">Prøvefri 10. klasse</a>
+            <a href="#">Studievejledning</a>
+            <a href="#">Musik og teaterforestilling</a>
+            <a href="#">Rejser</a>
+            <a href="#">Elever fra Grønland & Færøerne</a>
+            <a href="#">Dansk som andet sprog</a>
+        </div>
+
+
+        <button class="accordion">Livet på Ådalen</button>
+        <div class="panel">
+            <a href="#">Sund mad</a>
+            <a href="#">Medindflydelse</a>
+            <a href="#">Hverdagen</a>
+            <a href="#">Inklusion</a>
+        </div>
+
+        <a href="tilmeldbesoegsdag.html" class="knap1">Besøg skolen</a>
+
+
+    </nav>
+
+    <main>
+        <!-- **** siden er under opbygning  ********* -->
+        <section id="opmærksom">
+            <h1>hovsa! <br> vær opmærksom på at denne side er under opbygning.</h1>
+        </section>
+
+
+
+        <!-- *********landing med video og titel********* -->
+        <div class="videopladsholder">
+            <video controls muted loop src="images/forsidevideo.mp4">
+            </video>
+            <div class="landing">
+                <h1 id="kunstTitel">Udtryk din <br> kreativitet i kunst</h1>
+
+            </div>
+        </div>
+
+        <!-- *********** sektion med fagkort *********** -->
+        <section class="fagContainer">
+            <h2>Billedkunst på Ådalen</h2>
+            <img src="icons/billedkunst.png" class="ikon" alt="billedkunst ikon">
+
+
+            <div class="fagGrid">
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+
+                <div class="kunstKort">
+                    <div class="linjefagKort">
+                        <h3>Billedkunst</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="textList">
+            <ul> 
+            <li>På linjefaget billedkunst arbejder du med alt det kreative:</li>
+            <li>Udvikling af kreative ideer og omsætte dem til virkelighed – på og udenfor efterskolen.</li>
+            <li>Dine tekniske færdigheder inden for tegning, formgivning, digital kunst.</li>
+            <li> At skærpe dit kunstneriske blik.</li>
+        </ul>
+        </div>
+
+        <section class="moedElever">
+            <h2>Mød eleverne på Billedkunst</h2>
+
+            <div class="besøg kortContainer">
+                <div class="besøgsKort elev1" id="kunstElevEn">
+                    <div class="linjefagKort">
+                        <h3>Klik på billedet og lyt til //// fortælle om hendes oplevelse på billedkunstlinjen</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="besøg kortContainer">
+                <div class="besøgsKort elev2" id="kunstElevTo">
+                    <div class="linjefagKort">
+                        <h3>Klik på billedet og lyt til //// fortælle om hendes oplevelse på billedkunstlinjen</h3>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+  <!-- ********* footeren ********* -->
+  <footer>
+    <div class="footerLogo">
+      <img src="images/logo-stor-1.svg" alt="logo">
+    </div>
+
+    <div class="footerContainer">
+      <!-- to colonner en til venstre og en til højre-->
+      <div class="venstreSide">
+        <a href="tilmeldbesoegsdag.html" class="knap1">Besøg skolen</a>
+
+        <div class="textContainer">
+          <h3>Kontakt os:</h3>
+          <p>
+            Tlf: <a href="tel:+4587682200">+45 87682200</a> <br>
+            Email:
+            <a href="mailto:aadalen@efterskolen-aadalen.dk">aadalen@efterskolen-aadalen.dk</a>
+          </p>
+
+          <h3>Kontor åbningstider</h3>
+          <p>
+            Mandag-torsdag: kl. 9:00 - 12:30<br>
+            Fredag kl. 9:00 - 13:15
+          </p>
+
+          <h3>Følg med:</h3>
+          <div class="soMe">
+            <a href="https://www.instagram.com/efterskolenaadalen/?hl=en"><img src="icons/insta.png" alt="instagram logo"></a>
+            <a href="https://www.instagram.com/efterskolenaadalen/?hl=en"><img src="icons/fb.png" alt="facebook logo"></a>
+            <a href="https://www.youtube.com/@EfterskolenAadalen"><img src="icons/youtube.png" alt="youtube logo"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="højreside">
+        <div class="textContainer">
+          <h3>Find vej:</h3>
+          <p>
+            Efterskolen Ådalen <br>
+            Brogårdsvej 2<br>
+            8362 Hørning
+          </p>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2225.5488047492677!2d10.0503751!3d56.09572379999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c6bbcb9794545%3A0x421482ae40c48966!2zc3QsIEJyb2fDpXJkc3ZlaiAyLCA4MzYyIEjDuHJuaW5n!5e0!3m2!1sen!2sdk!4v1702460627846!5m2!1sen!2sdk"
+          width="450" height="350" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

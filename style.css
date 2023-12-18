@@ -1,0 +1,1316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Styletile men css basically - 
+så vi nemt kan ændre uden at skal rode efter det hele*/
+:root {
+  --font-size-primary: 3vw;
+  /* --font-size-secondary:  1.2vw;  */
+  --font-primary: "montserrat", sans-serif;
+  --font-secondary: "Playfair Display", serif;
+  --text-primary: #ffffff;
+  --text-secondary: #000000;
+  --bg-primary: #000000;
+  --bg-secondary: rgba(0, 0, 0, 0.6); /* overlay effekt */
+  --bg-accent: #fba808;
+}
+
+/* ---------------------------- basics --------------------------*/
+body {
+  background-color: black;
+  margin: 0;
+}
+
+/* så scrollbaren ikke er synlig */
+   body::-webkit-scrollbar{
+    display: none; 
+  } 
+
+h1 {
+  font-family: "montserrat", sans-serif;
+  font-size: 5vw;
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-size: 3vw;
+  border-left: solid 3px var(--bg-accent);
+  color: var(--text-primary);
+  text-align: center;
+  margin-top: 5%;
+}
+
+h3 {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  font-size: 1.5vw;
+}
+
+h4 {
+  font-family: var(--font-secondary);
+  color: var(--text-primary);
+  font-size: 3vw;
+  font-weight: lighter;
+}
+
+
+p {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+}
+
+a {
+  font-family: var(--font-primary);
+  text-decoration: none;
+}
+
+/* ----------------------- knapper --------------------------------- */
+.knap1 {
+  background-color: #fba808;
+  color: var(--text-secondary) !important;
+  transition: 0.3s;
+  font-weight: bold;
+  text-align: center;
+  padding: 1% 3%;
+
+}
+.knap2 {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-color: var(--bg-accent);
+  border-width: 3px;
+  border-style: solid;
+  padding: 1% 3%;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: "montserrat", sans-serif;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.centerKnap {
+  margin:3%;
+  text-align: center;
+}
+
+/* ---------------------------- nav bar --------------------*/
+
+#laptopNav a {
+  text-decoration: none;
+
+}
+
+#logo {
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav.is-active {
+  display: flex;
+}
+
+/* -------------------------------- landing ------------------------------- */
+.landing {
+  color: white;
+  margin-left: 2%;
+}
+
+.landing p {
+  font-family: "montserrat", sans-serif;
+  margin-bottom: 5%;
+}
+
+.videopladsholder {
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+}
+
+video {
+  width: 90%;
+  border-radius: 15px;
+  margin:auto;
+}
+
+.brødtekst {
+  z-index: 1;
+  margin: 5% 5% 2.5% 5%;
+  font-family: "montserrat", sans-serif;
+  font-size: 1.2vw;
+}
+
+.brødtekst a {
+  text-decoration: underline;
+  color: #fba808;
+}
+
+.brødtekst p {
+  color: white;
+  padding-left: 2.5%;
+  border-left: 3px solid #fba808;
+}
+
+/* ------------------------------ linjefag ----------------------------------- */
+
+.sectionMKort h2 {
+  /* kan det ikke bare være h2 generelt? for der er mange overskrifter med orange linje,
+    og så kan vi bruge h3 som overskriften uden linjen? */
+
+  color: white;
+  font-family: "montserrat", sans-serif;
+  font-size: 3vw;
+  border-left: solid 3px #fba808;
+  margin: 0 33%;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.linjefagsikoner {
+  max-height: 150px;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 2% 10%;
+  transition: 1s;
+}
+
+
+.kortContainer {
+  /* en container til alle kortene */
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.billedeKort {
+  /* en til at bestemme str. på kort */
+  height: 350px;
+  width: 350px;
+  background-color: aqua;
+  margin: 2%;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.linjefagKort {
+  /* en til at bestemme overlay */
+  height: 130px;
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.ikon {
+  width: 80px;
+  height: 80px;
+}
+
+.billedkunst {
+  background-image: url(images/billedkunstlinjefag.jpg);
+}
+
+.drama {
+  background-image: url(images/dramalinjefag.jpg);
+}
+
+.esport {
+  background-image: url(images/esportlinjefag.jpg);
+}
+
+.sport {
+  background-image: url(images/sportlinjefag.jpg);
+}
+
+.musik {
+  background-image: url(images/musiklinjefag.jpg);
+}
+
+/*------------------------------ blog ------------------------*/
+/* ref video: https://www.youtube.com/watch?v=9HcxHDS2w1s
+*/
+
+.bloggen {
+  background-color: #000f14;
+  padding-top: 0.1%;
+  margin-bottom: 5%;
+}
+
+.blog {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+/*Styles fra YTvideo start*/
+.carousel {
+  width: 76vw; /*vores bredde*/
+  height: 80vh; /*vores højde*/
+  position: relative;
+}
+
+.carousel > ul { /*fordi ul har default padding og margin*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0; /*Så billederne ryger oven på hinanden*/
+  opacity: 0; /*For at gemme billederne der ikke er "active"*/
+  transition: 300ms opacity ease-in-out; /*Vi har sat transition til 300ms så effecten bliver tydeligere*/
+  transition-delay: 300ms; /*Den nye slide fader færdig til data-active, før den gamle forsvinder*/
+}
+
+.slide > img {
+  display: block; 
+  width: 100%; /*100% bredde og højde så de udfylder .carousel*/
+  height: 100%; /**/
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px; /*vores*/
+}
+.slide[data-active] { 
+  opacity: 1; /*transition ease mellem opacity 0 og 1*/
+  transition-delay: 0;
+  z-index: 1; /*active slide dukker altid op øverst*/
+}
+
+.carousel-button {
+  position: absolute; /*Så vi frit kan rykke dem*/
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px; /*Så hjørnerne passer med vores afrundinger*/
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.248);
+}
+
+.carousel-button:hover /*hover state så knapperne bliver mere brugervenlige*/ {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.778);
+}
+
+/*
+.carousel-button:focus {
+  outline: 1px solid black;
+}*/
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem; /*Så knappen faktisk bliver rykket over til højre*/
+} /*Styles fra youtubevideo slut*/
+
+/* ----------------- efterskolernes aften og besøgsdag kort ------------ */
+
+.besøgsKort {
+  height: 500px;
+  width: 500px;
+  margin: 2%;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.besøg .kortContainer {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.besøgsdag {
+  background-image: url(images/besøg.jpg);
+  border-radius: 15px;
+}
+
+.efterskolernesAften {
+  background-image: url(images/aften.jpg);
+  border-radius: 15px;
+}
+
+.besøg .linjefagKort {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 200px;
+  width: 500px;
+  display: flex;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+  padding: 0 10%;
+}
+
+.besøg a {
+  padding: 3% 12%;
+  font-weight: bold;
+}
+
+.besøg img {
+  max-height: 300px;
+  display: flex;
+  /* skal sidde nederst */
+}
+
+/* --------------------- gamle elev citater ---------- */
+
+.gamleElever {
+  background-color: #000f14;
+  width: 100%;
+  padding-top: 3%;
+}
+
+/* ---------------- Tilmeldings sektion --------- */
+
+.tilmeldingContainer {
+  display: flex;
+  justify-content: center;
+  margin: 7% 0;
+}
+
+.tilmelding p {
+  text-align: center;
+  margin: 2% 0;
+}
+
+.tilmelding .knap1 {
+  font-weight: bold;
+}
+
+/* ----------------- Instagram sektion ---------------- */
+
+.instaContainer {
+  height: auto;
+  text-align: center;
+}
+
+.instaContainer h2 {
+  margin-bottom: 2%;
+}
+
+.instaContainer a{
+  color: var(--text-primary);
+}
+
+/* button stuff hvis vi vil bruge det 
+
+.btn{
+    padding: 10px 25px;
+    border: 2px solid #f39c12;
+    border-radius: 5px;
+    color: #f39c12;
+    text-decoration: none;
+    margin: 30px 0;
+    transition: all .5s ease;
+    font-weight: 600;
+}
+.btn:hover{
+    background-color: #f39c12;
+    color: #333;
+}
+.btn1{
+    margin-right: 15px;
+    background-color: #f39c12;
+    color: #000;
+}
+.btn1:hover{
+    background-color: transparent;
+    color: #f39c12;
+}
+
+*/
+
+/* ---------------------------- footer ---------------------- */
+
+footer {
+  margin-top: 5%;
+  background-color: #000f14;
+}
+
+footer a{
+  color: var(--text-primary);
+}
+
+.footerLogo {
+  margin-left: 10.5%;
+}
+
+.footerContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.venstreSide {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  line-height: 2;
+  border-left: 3px solid var(--bg-accent);
+  padding-left: 3%;
+  max-height: 550px;
+  max-width: 500px;
+  margin-top: 2%;
+  padding-bottom: 3%;
+}
+
+.venstreSide .knap1 {
+  max-width: 50%;
+  text-align: center;
+  font-weight: bold;
+  padding: 2% 2%;
+}
+
+.venstreSide a img {
+  width: 40px;
+  height: auto;
+  margin: 2%;
+}
+
+.textContainer h3 {
+  margin: 4% 0 1% 0;
+}
+
+.højreSide {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  line-height: 2;
+  margin-left: 2%;
+}
+
+.højreside iframe {
+  border-radius: 15px;
+  margin: 2% 0; 
+  max-width: 500px;
+  height: 500px;
+}
+
+/* ---------------- billedkunst underside --------------
+ ************** stadig under opbygning! ***********  */
+
+#opmærksom{
+  height: 300px;
+  color: var(--bg-accent);
+
+}
+
+#kunstTitel {
+  border-left: 4px solid var(--bg-accent);
+  padding-left: 20px;
+}
+
+/* ---- kunst grid med kort ---- */ 
+
+.fagContainer img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fagContainer h2{
+  margin-bottom: 2%;
+}
+
+.fagContainer h3{
+  font-size: 1vw;
+}
+
+.fagContainer{
+  width: 100%;
+  height: auto;
+}
+
+.fagGrid{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto; 
+  justify-content: center;
+  gap: 4% 1%;
+  margin: 2% 0;
+}
+
+.kunstKort{
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  border-radius: 15px;
+}
+
+.kunstKort > .linjefagKort{
+  width: auto;
+  padding:0;
+}
+
+
+/*  unorganiseret liste style */
+
+
+/* hover eller klik og lyt på elevkort */
+
+.elev1{ /*temp photo */
+  background-image: url(images/lasse.jpg);
+}
+
+.elev2{ /*temp photo */
+  background-image: url(images/mia.jpg);
+}
+
+
+
+
+
+
+/* ---------------- Tilmeldingsblanket undersider ------------ */
+#blanketinfo{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+#blanketinfo h2{
+  margin: auto;
+  padding: 0 2%;
+}
+
+#blanketinfo p{
+  text-align: center;
+  margin: 1% 17% 2% 17%;
+
+}
+
+.etKortIMidten{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5% 0;
+}
+
+form{
+  background-color: #000f14;
+  border-radius: 15px;
+  width: 65%;
+  padding: 5%;
+}
+
+.gul{
+  color: var(--bg-accent);
+}
+
+form h6{
+  font-family: var(--font-secondary);
+  color: var(--text-primary);
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin: 4% 0 1% 0;
+}
+
+label{
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  
+}
+
+form .textLabel{ /*margin virker ikke*/
+  font-family: var(--font-secondary);
+  color: var(--text-primary);
+  font-size: 1.5vw;
+  margin: 4% 0 1% 0;
+}
+
+ul li{
+  list-style: none;
+  margin-bottom: 1%;
+  color: #ffffff;
+  font-family: var(--font-primary);
+}
+
+.tekstinput{
+  background-color: #000f14;
+  border-radius: 15px;
+  border: #fba808 solid 3px;
+  font-family: var(--font-primary);
+  font-weight: bold;
+  color: var(--text-primary);
+  padding: 1.2%;
+  width: 90%;
+  margin: 1% 0 3% 0;
+}
+
+.kortmbgfarve{
+  background-color: #fba808;
+  border-radius: 15px;
+  width: 65%;
+  padding: 5%;
+}
+
+#programli{
+  margin-left: 5%;
+}
+
+#programli li{
+  list-style-type: disc;
+}
+
+#laesMereKort{
+  background-image: url(images/læsmeregruppebillede.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 52%;
+  height: 450px;
+}
+
+#laesMereOverlay{
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 5%;
+}
+
+#laesMereOverlay h3{
+  font-size: 2.5vw;
+}
+
+#laesMereOverlay p{
+  font-size: 1vw;
+}
+
+#laesMereOverlay .knap2{
+  text-align: center;
+  margin: 2% auto;
+  padding: 2% 4%;
+}
+
+/*----------------------------------------Mobil---------------------------------*/
+
+@media screen and (max-width: 780px) {
+  #laptopNav {
+    display: none;
+  }
+
+  #mobilNav {
+    display: block; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  
+
+
+/* ---------------- burger menu ----------------------------- */
+.hamburger{
+    display: block;
+    cursor: pointer;
+    margin-right: 5%;
+    width: 40px;
+    height: 40px;
+}
+.hamburger .bar, .hamburger:after, .hamburger:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 10px 0px;
+    transition: 0.5s;
+    background-color: var(--bg-accent);
+}
+.hamburger.is-active:before {
+    /* Rotér top linjen 45 grader og vip den ned på hæjre side*/
+    transform: rotate(45deg) translate(10px, 9px);
+}
+
+.hamburger.is-active:after {
+    /* rotér bund linjen -45 grader og vip den op på hjøre side */
+    transform: rotate(-45deg) translate(9px, -10px);
+}
+.hamburger.is-active .bar{
+    opacity: 0;
+}
+
+.mobile-nav{
+  display: none;
+
+}
+.mobile-nav.is-active{
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  transition: 0.5s; 
+  z-index: 5;
+  background-color: var(--bg-secondary);
+}
+
+.mobile-nav > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+}
+
+
+.mobile-nav a{
+  color: var(--bg-accent);
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 10pt;
+  margin: 1% 0;
+}
+
+.mobile.nav .knap1{
+  border: none;
+}
+
+
+/* til accordian-delen af burger menu */
+.accordion {
+  cursor: pointer;
+  margin: 2%;
+  width: 100%;
+  text-align: left;
+  transition: 0.4s;
+  background-color: hsla(0, 0%, 0%, 0); /* gør den gennemsigtig */
+  border:none;
+
+  /* og til texten */
+  text-align: center;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+
+.panel {
+  display: flex;
+  display: block;
+  flex-direction: column;
+}
+
+
+/* knapper og basics som headings*/
+
+  .knap1,
+  .knap2,
+  .centerknap a {
+    font-size: 12pt;
+    border-radius: 15px;
+  }
+
+  .centerKnap .knap1 {
+    width: 40%;
+    height: auto;
+    font-weight: bold;
+    margin: 2%;
+    padding: 1.5% 3%;
+    margin-bottom: 4%;
+  }
+
+  h1 {
+    font-size: 20pt;
+  }
+
+  h2 {
+    font-size: 16pt;
+    height: 10%;
+    margin: 0 12%;
+  }
+
+  h3 {
+    font-size: 3.5vw;
+  }
+
+  p {
+    font-size: 10pt;
+  }
+
+  .landing {
+    position: relative;
+    margin: 3% 0 0 5%;
+  }
+
+  .landing p {
+    margin-bottom: 3%;
+  }
+
+  .videopladsholder {
+    flex-direction: column;
+  }
+
+  .linjefagsikoner img {
+    height: 40px;
+  }
+
+  .billedeKort {
+    height: 250px;
+    width: 250px;
+  }
+
+  .linjefagKort {
+    height: 70px;
+    width: 250px;
+  }
+
+  .ikon {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* instagram sektion */
+  .kunBilleder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    margin-bottom: 10%;
+  }
+
+  .instaGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 100%;
+    row-gap: 2%;
+    column-gap: 2%;
+    justify-content: center;
+  }
+
+  .grid-item {
+    border-radius: 15px;
+    padding: 2%;
+  }
+
+  .instaGrid img {
+    max-width: 100px;
+  }
+
+
+  /* footer */
+  .footerContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  footer {
+    margin: 0 2% 2% 2%;
+  }
+
+
+/* besøgskort */
+
+.besøgsKort {
+  height: 300px;
+  width: 300px;
+}
+
+  
+  /* gamle elev sektion */
+  .elevContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    justify-content: center;
+    height: auto;
+  }
+
+  #mobilVersion {
+    display: block;
+  }
+
+  #laptopVersion {
+    display: none;
+  }
+
+  .LasseOgMia {
+    width: 100%;
+    padding: 0 1.5%; /*luft i siderne*/
+  }
+
+  .LasseOgMia img {
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  .LasseOgMia h3 {
+    margin: 4% 0 3% 0;
+    text-align: center;
+  }
+
+  .LasseOgMia h4 {
+    font-size: 16pt;
+    font-family: var(--font-secondary);
+    margin: 2% 0 2% 0;
+    font-style: italic;
+  }
+
+  .column1,
+  .column2 {
+    margin: 0 6%;
+  }
+
+  /* tilmeldingssektion */
+
+  .tilmelding {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: 4px solid var(--bg-accent);
+    padding: 5% 10%;
+    margin: 5%;
+    gap: 5%;
+  }
+
+  .tilmelding h4 {
+    font-size: 20pt;
+    margin-bottom: 5%;
+  }
+
+  .tilmelding .knap1 {
+    font-weight: bold;
+    padding: 2% 4%;
+    margin-top: 5%;
+  }
+
+  /* instagram sektion */
+
+  .kunBilleder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    margin-bottom: 10%;
+  }
+
+  .instaGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 100%;
+    row-gap: 2%;
+    column-gap: 2%;
+    justify-content: center;
+  }
+
+  .grid-item {
+    border-radius: 15px;
+    padding: 2%;
+  }
+
+  .instaGrid img {
+    max-width: 100px;
+  }
+
+  /* footer */
+
+  
+.højreside iframe {
+  border-radius: 15px;
+  margin: 2% 0; 
+  max-width: 250px;
+  height: 250px;
+}
+
+
+  /* ******** billedkunst underside ******** */
+  #kunstTitel {
+    font-size: 22pt;
+  }
+}
+
+/*----------------------------------------------Laptop------------------------------------*/
+
+@media screen and (min-width: 780px) {
+  #laptopNav {
+    display: block;
+  }
+
+  #mobilNav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  #laptopNav {
+    font-family: "montserrat", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  .hamburger{
+    display: none;
+}
+
+  .knap1,
+  .knap2,
+  .cetnerknap a {
+    font-size: 1.2vw;
+    border-radius: 15px;
+  }
+
+/* ----------------- drop down-----------------
+**** ref: w3schools *** */
+.dropbtn {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 1.2vw;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+  transition: 0.3s;
+  transform: scale(1.1);
+  color: var(--bg-accent);
+  
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bg-secondary);
+  min-width: 160px;
+  overflow: auto;
+  border: var(--bg-accent);
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.dropdown-content.show {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover{
+  color: var(--bg-accent);
+  background-color: var(--bg-secondary);
+}
+
+
+
+.show {
+  display: block;
+}
+
+
+/* ------------ hover effekter ------------ */
+
+#readmore:hover {
+  transition: 3s;
+  transform: scale(1.1);
+  color: var(--text-primary);
+  text-decoration: none;
+  box-shadow: 0px 3px 0px var(--text-primary);
+}
+
+.knap1:hover {
+  transition: 0.3s;
+  background-color: var(--bg-secondary);
+  border: 4px solid var(--bg-accent);
+  color: var(--text-primary) !important;
+}
+.knap2:hover {
+  background-color: var(--bg-accent);
+  color: var(--text-secondary);
+}
+
+  h2 {
+    margin: 0 33%;
+  }
+
+  p {
+    font-size: 15pt;
+  }
+
+  .centerKnap .knap1 {
+    width: 250px;
+    height: 25px;
+    font-weight: bold;
+    margin-top: 2%;
+    padding-left: 2.7%;
+    margin-bottom: 4%;
+  }
+
+  .landing {
+    position: absolute;
+    top: 45%;
+    left: 5.8%;
+  }
+
+
+  .linjefagsikoner img {
+    height: 80px;
+  }
+
+  
+  .linjefagsikoner img:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+    box-shadow: 0px 3px 0px var(--bg-accent);
+  }
+
+  /* gamle elev sektion */
+
+  .elevContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    justify-content: center;
+    height: auto;
+  }
+
+  #mobilVersion {
+    display: none;
+  }
+
+  #laptopVersion {
+    display: block;
+  }
+
+  .LasseOgMia {
+    width: 40%;
+    padding: 0 1.5%; /*luft i siderne*/
+  }
+
+  .LasseOgMia img {
+    border-radius: 15px;
+  }
+
+  .column1 {
+    padding-left: 10%;
+    max-width: 400px;
+  }
+
+  .column2 {
+    padding-left: 10%;
+    max-width: 400px;
+  }
+
+  .LasseOgMia h3 {
+    margin: 4% 0 3% 0;
+  }
+
+  .LasseOgMia h4 {
+    font-size: 2vw;
+    font-family: var(--font-secondary);
+    margin: 2% 0 2% 0;
+    font-style: italic;
+  }
+
+  /* tilmeldingssektion */
+
+  .tilmelding {
+    width: 75%;
+    height: auto;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: 4px solid var(--bg-accent);
+    padding: 5% 10%;
+  }
+
+
+
+  /* instagram sektion */
+  .kunBilleder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+  }
+
+  .instaGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    max-width: 100%;
+    row-gap: 2%;
+    column-gap: 2%;
+    justify-content: center;
+  }
+
+  .instaContainer a:hover{
+    color: var(--bg-accent);
+  }
+
+  .grid-item {
+    border-radius: 15px;
+    padding: 2%;
+  }
+
+  .instaGrid img {
+    max-width: 180px;
+  }
+
+  /* ****** Billedkunst underside **** */
+  #kunstTitel {
+    font-size: 4vw;
+  }
+
+
+  footer a:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+    box-shadow: 0px 2px 0px var(--bg-accent);
+  }
+}
