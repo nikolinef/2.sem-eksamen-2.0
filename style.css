@@ -290,6 +290,28 @@ video {
   object-position: center;
   border-radius: 15px; /*vores*/
 }
+
+.slide > .blogrubrik{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.10);
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.blogrubrik h3{
+  font-size: 2.5vw;
+  margin-left: 7%;
+}
+
+.blogrubrik .knap2{
+margin: 0 0 10% 7%;
+width: 15%;
+}
+
 .slide[data-active] { 
   opacity: 1; /*transition ease mellem opacity 0 og 1*/
   transition-delay: 0;
