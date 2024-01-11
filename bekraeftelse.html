@@ -16,7 +16,7 @@
 
     <!-- favicon-->
     <link rel="icon" href="icons/favicon.png" type="image/png">
-    <title>Tilmelding til besøgsdag</title>
+    <title>Tilmeldingsbekræftelse</title>
 </head>
 
 <!-- **********************************
@@ -149,137 +149,14 @@
 
     </nav>
     <main>
-        <section id="blanketinfo">
-            <h2>Tilmeld dig besøgsdag på Efterskolen Ådalen</h2>
-            <p>Besøg os på en af vores besøgsdage, hvis du overvejer, om Efterskolen Ådalen er noget for dig.
-                Vores elever viser dig rundt på skolen, og du og din familie snakker med en lærer.
-                <br><br>
-                Tilmeld dig nedenfor:
-            </p>
-        </section>
-
-        <section class="etKortIMidten">
-            <form id="tilmeldingsform">
-                <h4>Blanket til besøgsdag</h4>
-                <p class="gul">*Skal udfyldes</p>
-                <label for="elevnavn" class="textLabel">*Elevens fulde navn</label>
-                <br>
-                <input type="text" class="tekstinput" placeholder="William Nielsen">
-
-                <h6>*Besøgsdato</h6>
-                <ul>
-                    <li>
-                        <input type="radio" id="20februar" name="besoesdato" value="februar">
-                        <label for="februar">d. 20. februar</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="3februar" name="besoesdato" value="marts">
-                        <label for="marts">d. 3. marts</label>
-                    </li>
-                </ul>
-
-                <h6>*Ønsker I at snakke med en lærer?<br>
-                    (Samtalen er uforpligtende, men en forudsætning for den endelige tilmelding)</h6>
-                <ul>
-                    <li>
-                        <input type="radio" id="Ja" name="samtale" value="ja">
-                        <label for="ja">Ja</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="Nej" name="samtale" value="nej">
-                        <label for="nej">Nej</label>
-                    </li>
-                </ul>
-
-                <h6>Ønsket skoleår</h6>
-                <ul>
-                    <li>
-                        <input type="radio" id="2425" name="skoleår" value="2024/2025">
-                        <label for="2024/2025">2024/2025</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="2526" name="skoleår" value="2025/2026">
-                        <label for="2025/2026">2025/2026</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="2627" name="skoleår" value="2026/2027">
-                        <label for="2026/2027">2026/2027</label>
-                    </li>
-                </ul>
-
-                <h6>Klassetrin i det ønsket skoleår</h6>
-                <ul>
-                    <li>
-                        <input type="radio" id="9klasse" name="klassetrin" value="9klasse">
-                        <label for="9klasse">9. klasse</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="10klasse" name="klassetrin" value="10klasse">
-                        <label for="10klasse">10. klasse</label>
-                    </li>
-                </ul>
-
-                <h6>Hvilket linjefag er du interesseret i?<br>
-                    (sæt gerne to krydser)</h6>
-                <ul>
-                    <li>
-                        <input type="radio" id="tbbilledkunst" name="linjefag" value="billedkunst">
-                        <label for="billedkunst">Billedkunst (venteliste til 2024/25)</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="tbdrama" name="linjefag" value="drama">
-                        <label for="drama">Drama</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="tbmusik" name="linjefag" value="musik">
-                        <label for="musik">Musik (venteliste til 2024/25)</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="tbsport" name="linjefag" value="sport">
-                        <label for="sport">Sport</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="tbesport" name="linjefag" value="esport">
-                        <label for="esport">Esport</label>
-                    </li>
-                </ul>
-
-                <h6>Køn</h6>
-                <ul>
-                    <li>
-                        <input type="radio" id="pige" name="koen" value="pige">
-                        <label for="pige">Pige</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="dreng" name="koen" value="dreng">
-                        <label for="dreng">Dreng</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="andetkoen" name="koen" value="andet">
-                        <label for="andet">Andet</label>
-                    </li>
-                </ul>
-
-                <label for="forældrenr" class="textLabel">*Forældre/pårørendes mobilnr.:</label>
-                <br>
-                <input type="text" class="tekstinput" placeholder="12345678">
-
-                <label for="forældremail" class="textLabel">*Forældre/pårørendes email:</label>
-                <br>
-                <input type="text" class="tekstinput" placeholder="Hannenielsen@gmail.com">
-
-                <label for="postnr" class="textLabel">*Postnr.:</label>
-                <br>
-                <input type="text" class="tekstinput" placeholder="8000">
-                <br>
-                <label for="bemaerkninger" class="textLabel">Evt. bemærkninger</label>
-                <br>
-                <input type="text" class="tekstinput" maxlength="250" placeholder="Maks 250 tegn">
-                <br>
-                <br>
-                <a href="bekraeftelse.html" class="knap1">Send tilmelding</a>
-
-            </form>
+        <section id="bekræftelsesside">
+            <div id="bekræftelsesramme">
+                <img src="icons/bekræft.png" alt="tjektegn">
+                <h2>Tak for jeres tilmelding til besøgsdag</h2>
+                <h3 class="gul">Vi glæder os til at se jer d. 20 februar</h3>
+                <p>I modtager en mail med en bekræftelse og nærmere information om besøgsdagen</p>
+                <a href="index.html" class="knap1">Tilbage til forsiden</a>
+            </div>
         </section>
 
         <section class="etKortIMidten">

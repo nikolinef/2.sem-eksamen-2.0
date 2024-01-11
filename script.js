@@ -27,9 +27,6 @@ buttons.forEach((button) => { //forEach starter et loop over de to knapper0
   });
 });
 
- 
- 
- 
  // ------det her er til burgeren ------ //
  
  /* ******* references  ************
@@ -97,7 +94,6 @@ for (i = 0; i < acc.length; i++) {
   acc[i].nextElementSibling.style.display = "none";
 }
 
-
  
  /* ------- det her er til drop down --------------- 
  *************** references ***************
@@ -136,15 +132,7 @@ window.onclick = function(event) {
         }
     }
 }
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
  
  
  // ------- det her er til billedkunst med de to elever man kan hover på //

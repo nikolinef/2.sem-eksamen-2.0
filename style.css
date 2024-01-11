@@ -609,6 +609,33 @@ footer a{
 
 
 /* ---------------- Tilmeldingsblanket undersider ------------ */
+#bekræftelsesside{
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5% 0;
+}
+
+#bekræftelsesramme{
+  border: solid #fba808 3px;
+  border-radius: 15px;
+  text-align: center;
+  width: 65%;
+  padding: 4.5% 0;
+}
+
+#bekræftelsesramme h2{
+  margin: 5% auto 2.5% auto;
+  border: none;
+}
+
+#bekræftelsesramme p{
+  margin: 3% 0 5% 0;
+}
+
+#bekræftelsesramme > .knap1{
+  padding: 1.5% 3%;
+}
+
 #blanketinfo{
   display: flex;
   flex-direction: column;
@@ -650,7 +677,7 @@ form h6{
   color: var(--text-primary);
   font-size: 1.5vw;
   font-weight: 400;
-  margin: 4% 0 1% 0;
+  margin: 0 0 1% 0;
 }
 
 label{
@@ -659,11 +686,14 @@ label{
   
 }
 
-form .textLabel{ /*margin virker ikke*/
+form .textLabel{
   font-family: var(--font-secondary);
   color: var(--text-primary);
   font-size: 1.5vw;
-  margin: 4% 0 1% 0;
+}
+
+form ul{
+  margin-bottom: 4%;
 }
 
 ul li{
@@ -685,15 +715,15 @@ ul li{
   margin: 1% 0 3% 0;
 }
 
-.kortmbgfarve{
-  background-color: #fba808;
+.kortubgfarve{
   border-radius: 15px;
+  border: #fba808 solid 3px;
   width: 65%;
   padding: 5%;
 }
 
 #programli{
-  margin-left: 5%;
+  margin: 2% 0 0 5%;
 }
 
 #programli li{
@@ -710,12 +740,12 @@ ul li{
 }
 
 #laesMereOverlay{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.40);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   height: 100%;
-  padding: 5%;
+  padding-left: 5%;
 }
 
 #laesMereOverlay h3{
@@ -727,8 +757,7 @@ ul li{
 }
 
 #laesMereOverlay .knap2{
-  text-align: center;
-  margin: 2% auto;
+  margin: 2% auto 6% 0;
   padding: 2% 4%;
 }
 
