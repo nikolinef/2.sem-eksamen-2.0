@@ -55,6 +55,7 @@ h4 {
   color: var(--text-primary);
   font-size: 3vw;
   font-weight: lighter;
+  margin-bottom: 2%;
 }
 
 
@@ -421,6 +422,15 @@ width: 15%;
   margin: 2% 0;
 }
 
+.tilmelding p a {
+  color: #fba808;
+}
+
+.tilmelding p a:hover {
+  color: #fba808;
+  text-decoration: underline;
+}
+
 .tilmelding .knap1 {
   font-weight: bold;
 }
@@ -487,6 +497,10 @@ footer a{
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+
+.textContainer p a{
+  color: #fba808;
 }
 
 .venstreSide {
@@ -604,38 +618,7 @@ footer a{
 }
 
 
-
-
-
-
 /* ---------------- Tilmeldingsblanket undersider ------------ */
-#bekræftelsesside{
-  display: flex;
-  justify-content: center;
-  margin: 0 0 5% 0;
-}
-
-#bekræftelsesramme{
-  border: solid #fba808 3px;
-  border-radius: 15px;
-  text-align: center;
-  width: 65%;
-  padding: 4.5% 0;
-}
-
-#bekræftelsesramme h2{
-  margin: 5% auto 2.5% auto;
-  border: none;
-}
-
-#bekræftelsesramme p{
-  margin: 3% 0 5% 0;
-}
-
-#bekræftelsesramme > .knap1{
-  padding: 1.5% 3%;
-}
-
 #blanketinfo{
   display: flex;
   flex-direction: column;
@@ -668,15 +651,20 @@ form{
   padding: 5%;
 }
 
+form p{
+  margin-bottom: 3%;
+  font-size: 1.2vw;
+}
+
 .gul{
   color: var(--bg-accent);
 }
 
 form h6{
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   color: var(--text-primary);
   font-size: 1.5vw;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 0 1% 0;
 }
 
@@ -687,9 +675,10 @@ label{
 }
 
 form .textLabel{
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   color: var(--text-primary);
   font-size: 1.5vw;
+  font-weight: 600;
 }
 
 form ul{
@@ -759,6 +748,95 @@ ul li{
 #laesMereOverlay .knap2{
   margin: 2% auto 6% 0;
   padding: 2% 4%;
+}
+
+/*-----------------------------Bekræftelsesside----------------------*/
+
+.bekræftelse{
+  border: solid #fba808 3px;
+  border-radius: 15px;
+  text-align: center;
+  width: 65%;
+  padding: 3% 0;
+}
+
+.bekræftelse h2{
+  margin: 5% auto 2.5% auto;
+  border: none;
+}
+
+.bekræftelse p{
+  margin: 3% 0 5% 0;
+}
+
+.bekræftelse > .knap1{
+  padding: 1.5% 3%;
+}
+/*-----------------------------INDmeldelsesside----------------------*/
+.femkort{
+  width: 74.5%;
+  /*background-color: aqua;
+  /*height: 105vh;*/
+  display: flex;
+  justify-content: space-between;
+}
+
+.touafem, .treuafem{
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.touafem .trin:first-child{
+  height: 56%;
+}
+
+.touafem .trin:nth-child(2){
+  height: 41%;
+}
+
+.touafem .trin:first-child .knap1{
+  padding: 2%;
+}
+
+.touafem .trin:first-child p{
+  margin-bottom: 5%;
+}
+
+.trin{
+  background-color: #000f14;
+  border-radius: 15px;
+  padding: 6%;
+}
+
+#trinubg{
+  display: flex;
+  flex-direction: row;
+  height: 21%;
+}
+
+#trinubg img{
+  border-radius: 15px;
+  height: 100%;
+}
+
+#trinubg div{
+  width: 75.5%;
+  padding: 6%;
+}
+
+#trinubg div a{
+  color: #fba808;
+}
+
+#trinubg div a:hover{
+  text-decoration: underline;
+}
+
+.treuafem .trin:nth-child(3){
+  height: 41%;
 }
 
 /*----------------------------------------Mobil---------------------------------*/
