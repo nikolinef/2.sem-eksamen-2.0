@@ -778,6 +778,7 @@ ul li{
   /*background-color: aqua;
   /*height: 105vh;*/
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 5%;
 }
@@ -854,9 +855,6 @@ ul li{
     align-items: center;
     justify-content: space-between;
   }
-
-
-  
 
 
 /* ---------------- burger menu ----------------------------- */
@@ -1172,12 +1170,18 @@ ul li{
   /* footer */
 
   
-.højreside iframe {
-  border-radius: 15px;
-  margin: 2% 0; 
-  max-width: 250px;
-  height: 250px;
-}
+  .højreside iframe {
+    border-radius: 15px;
+    margin: 2% 0; 
+    max-width: 250px;
+    height: 250px;
+  }
+
+  /*****************Indmelding*************/
+  .touafem, .treuafem{ /*lidt resposive*/
+    width: 100%;
+    height: auto;
+  }
 
 
   /* ******** billedkunst underside ******** */
