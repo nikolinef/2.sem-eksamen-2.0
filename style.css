@@ -619,6 +619,10 @@ footer a{
 
 
 /* ---------------- Tilmeldingsblanket undersider ------------ */
+#bekraeftshowup{
+  display: none;
+}
+
 #blanketinfo{
   display: flex;
   flex-direction: column;
@@ -690,6 +694,10 @@ ul li{
   margin-bottom: 1%;
   color: #ffffff;
   font-family: var(--font-primary);
+}
+
+form button{
+  border-style: none;
 }
 
 .tekstinput{
@@ -775,8 +783,6 @@ ul li{
 /*-----------------------------INDmeldelsesside----------------------*/
 .femkort{
   width: 74.5%;
-  /*background-color: aqua;
-  /*height: 105vh;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

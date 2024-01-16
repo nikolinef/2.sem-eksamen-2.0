@@ -133,7 +133,14 @@ window.onclick = function(event) {
     }
 }
 
- 
+//bekræft show up
+const bekraeftShowUp = getElementById("bekraeftshowup")
+const blanketInfo = getElementById("blanketinfo")
+const tilmeldingsForm = getElementById("tilmeldingsform")
+const sendTilmelding = getElementById("sendtilmelding")
+
+
+
  
  // ------- det her er til billedkunst med de to elever man kan hover på //
  // men det virker ikke....
