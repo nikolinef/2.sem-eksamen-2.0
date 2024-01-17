@@ -133,13 +133,74 @@ window.onclick = function(event) {
     }
 }
 
-//bekræft show up
-const bekraeftShowUp = getElementById("bekraeftshowup")
-const blanketInfo = getElementById("blanketinfo")
-const tilmeldingsForm = getElementById("tilmeldingsform")
-const sendTilmelding = getElementById("sendtilmelding")
+//bekræft show up -- virker ikke :'(
+const bekraeftShowUp = getElementById("bekraeftshowup");
+const blanketInfo = getElementById("blanketinfo");
+const tilmeldingsForm = getElementById("tilmeldingsform");
+const sendTilmelding = getElementById("sendtilmelding");
+
+sendTilmelding.addEventListener("click", visBekraeftelse )
+function visBekraeftelse(){
+    blanketInfo.style.display = "none";
+    tilmeldingsForm.style.display = "none";
+    bekraeftShowUp.style.display = "block";
+
+    const besoegsdatoValue = getElementsByName("besoesdato");
+    let valgtDato = "";
+    /*chatgbt har lavet resten */
+    for (let i = 0; i < besoegsdatoValue.length; i++) { /*et loop */
+        if (besoegsdatoValue[i].checked) {
+            valgtDato = besoegsdatoValue[i].value;
+            break;
+        }
+    }
+    // Opdater teksten i bekraeftshowup h3-elementet
+    bekraeftShowUp.querySelector("h3.gul").innerText = `Vi glæder os til at se jer d. ${valgtDato}`;
+}
+
+/* *******fra chatgbt til bekræfthalløj
+const bekraeftShowUp = document.getElementById("bekraeftshowup");
+const blanketInfo = document.getElementById("blanketinfo");
+const tilmeldingsForm = document.getElementById("tilmeldingsform");
+const sendTilmelding = document.getElementById("sendtilmelding");
+
+sendTilmelding.addEventListener("click", visBekraeftelse);
+
+function visBekraeftelse() {
+    // Skjul blanketInfo og tilmeldingsForm
+    blanketInfo.style.display = "none";
+    tilmeldingsForm.style.display = "none";
+
+    // Find den valgte besøgsdato
+    const besoegsDatoElements = document.getElementsByName("besoesdato");
+    let valgtDato = "";
+    for (let i = 0; i < besoegsDatoElements.length; i++) {
+        if (besoegsDatoElements[i].checked) {
+            valgtDato = besoegsDatoElements[i].value;
+            break;
+        }
+    }
+
+    // Opdater teksten i bekraeftshowup h3-elementet
+    bekraeftShowUp.querySelector("h3.gul").innerText = `Vi glæder os til at se jer d. ${valgtDato}`;
+
+    // Vis bekraeftShowUp
+    bekraeftShowUp.style.display = "block";
+}*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+//************************************ */
 
  
  // ------- det her er til billedkunst med de to elever man kan hover på //
