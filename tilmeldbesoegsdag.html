@@ -174,16 +174,16 @@
                 <p class="gul">*Skal udfyldes</p>
                 <label for="elevnavn" class="textLabel">*Elevens fulde navn</label>
                 <br>
-                <input type="text" class="tekstinput" placeholder="William Nielsen">
+                <input type="text" id="elevnavn" class="tekstinput" placeholder="William Nielsen">
 
                 <h6>*Besøgsdato</h6>
                 <ul>
                     <li>
-                        <input type="radio" id="20februar" name="besoesdato" value="februar">
+                        <input type="radio" id="februar" name="besoesdato" value="februar">
                         <label for="februar">d. 20. februar</label>
                     </li>
                     <li>
-                        <input type="radio" id="3februar" name="besoesdato" value="marts">
+                        <input type="radio" id="marts" name="besoesdato" value="marts">
                         <label for="marts">d. 3. marts</label>
                     </li>
                 </ul>
@@ -192,11 +192,11 @@
                     (Samtalen er uforpligtende, men en forudsætning for den endelige tilmelding)</h6>
                 <ul>
                     <li>
-                        <input type="radio" id="Ja" name="samtale" value="ja">
+                        <input type="radio" id="ja" name="samtale" value="ja">
                         <label for="ja">Ja</label>
                     </li>
                     <li>
-                        <input type="radio" id="Nej" name="samtale" value="nej">
+                        <input type="radio" id="nej" name="samtale" value="nej">
                         <label for="nej">Nej</label>
                     </li>
                 </ul>
@@ -205,15 +205,15 @@
                 <ul>
                     <li>
                         <input type="radio" id="2425" name="skoleår" value="2024/2025">
-                        <label for="2024/2025">2024/2025</label>
+                        <label for="2425">2024/2025</label>
                     </li>
                     <li>
                         <input type="radio" id="2526" name="skoleår" value="2025/2026">
-                        <label for="2025/2026">2025/2026</label>
+                        <label for="2526">2025/2026</label>
                     </li>
                     <li>
                         <input type="radio" id="2627" name="skoleår" value="2026/2027">
-                        <label for="2026/2027">2026/2027</label>
+                        <label for="2627">2026/2027</label>
                     </li>
                 </ul>
 
@@ -234,23 +234,23 @@
                 <ul>
                     <li>
                         <input type="radio" id="tbbilledkunst" name="linjefag" value="billedkunst">
-                        <label for="billedkunst">Billedkunst (venteliste til 2024/25)</label>
+                        <label for="tbbilledkunst">Billedkunst (venteliste til 2024/25)</label>
                     </li>
                     <li>
                         <input type="radio" id="tbdrama" name="linjefag" value="drama">
-                        <label for="drama">Drama</label>
+                        <label for="tbdrama">Drama</label>
                     </li>
                     <li>
                         <input type="radio" id="tbmusik" name="linjefag" value="musik">
-                        <label for="musik">Musik (venteliste til 2024/25)</label>
+                        <label for="tbmusik">Musik (venteliste til 2024/25)</label>
                     </li>
                     <li>
                         <input type="radio" id="tbsport" name="linjefag" value="sport">
-                        <label for="sport">Sport</label>
+                        <label for="tbsport">Sport</label>
                     </li>
                     <li>
                         <input type="radio" id="tbesport" name="linjefag" value="esport">
-                        <label for="esport">Esport</label>
+                        <label for="tbesport">Esport</label>
                     </li>
                 </ul>
 
@@ -266,29 +266,29 @@
                     </li>
                     <li>
                         <input type="radio" id="andetkoen" name="koen" value="andet">
-                        <label for="andet">Andet</label>
+                        <label for="andetkoen">Andet</label>
                     </li>
                 </ul>
 
                 <label for="forældrenr" class="textLabel">*Forældre/pårørendes mobilnr.:</label>
                 <br>
-                <input type="text" class="tekstinput" placeholder="12345678">
+                <input type="text" id="forældrenr" class="tekstinput" placeholder="12345678">
 
                 <label for="forældremail" class="textLabel">*Forældre/pårørendes email:</label>
                 <br>
-                <input type="text" class="tekstinput" placeholder="Hannenielsen@gmail.com">
+                <input type="text" id="forældremail" class="tekstinput" placeholder="Hannenielsen@gmail.com">
 
                 <label for="postnr" class="textLabel">*Postnr.:</label>
                 <br>
-                <input type="text" class="tekstinput" placeholder="8000">
+                <input type="text" id="postnr" class="tekstinput" placeholder="8000">
                 <br>
                 <label for="bemaerkninger" class="textLabel">Evt. bemærkninger</label>
                 <br>
-                <input type="text" class="tekstinput" maxlength="250" placeholder="Maks 250 tegn">
+                <input type="text" id="bemaerkninger" class="tekstinput" maxlength="250" placeholder="Maks 250 tegn">
                 <br>
                 <br>
-                <!--<button type="submit" id="sendtilmelding" class="knap1" value="sendtilmelding">Send tilmelding</button>-->
-                <a href="bekraeftelse.html" class="knap1">Send tilmelding</a>
+            <button type="submit" id="sendtilmelding" class="knap1" value="sendtilmelding" onclick="visBekraeftelse()">Send tilmelding</button>
+                <!--<a href="bekraeftelse.html" class="knap1">Send tilmelding</a>-->
 
             </form>
         </section>

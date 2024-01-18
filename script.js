@@ -133,32 +133,24 @@ window.onclick = function(event) {
     }
 }
 
-//bekræft show up -- virker ikke :'(
-const bekraeftShowUp = getElementById("bekraeftshowup");
-const blanketInfo = getElementById("blanketinfo");
-const tilmeldingsForm = getElementById("tilmeldingsform");
-const sendTilmelding = getElementById("sendtilmelding");
+//bekræft show up
+const bekraeftShowUp = document.getElementById("bekraeftshowup");
+const blanketInfo = document.getElementById("blanketinfo");
+const tilmeldingsForm = document.getElementById("tilmeldingsform");
+const sendTilmelding = document.getElementById("sendtilmelding");
+
+console.log(bekraeftShowUp, blanketInfo, tilmeldingsForm, sendTilmelding);
 
 sendTilmelding.addEventListener("click", visBekraeftelse )
 function visBekraeftelse(){
+    console.log("Funktion executed");
+
     blanketInfo.style.display = "none";
     tilmeldingsForm.style.display = "none";
     bekraeftShowUp.style.display = "block";
-
-    const besoegsdatoValue = getElementsByName("besoesdato");
-    let valgtDato = "";
-    /*chatgbt har lavet resten */
-    for (let i = 0; i < besoegsdatoValue.length; i++) { /*et loop */
-        if (besoegsdatoValue[i].checked) {
-            valgtDato = besoegsdatoValue[i].value;
-            break;
-        }
-    }
-    // Opdater teksten i bekraeftshowup h3-elementet
-    bekraeftShowUp.querySelector("h3.gul").innerText = `Vi glæder os til at se jer d. ${valgtDato}`;
 }
 
-/* *******fra chatgbt til bekræfthalløj
+/* *******fra chatgbt's forsøg på at sende tilmeldingen, men det virker ikke
 const bekraeftShowUp = document.getElementById("bekraeftshowup");
 const blanketInfo = document.getElementById("blanketinfo");
 const tilmeldingsForm = document.getElementById("tilmeldingsform");
@@ -180,7 +172,6 @@ function visBekraeftelse() {
             break;
         }
     }
-
     // Opdater teksten i bekraeftshowup h3-elementet
     bekraeftShowUp.querySelector("h3.gul").innerText = `Vi glæder os til at se jer d. ${valgtDato}`;
 
